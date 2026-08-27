@@ -1,0 +1,5 @@
+print("Adinda Yunita Ainin Nurohmah")
+print("2605060071")
+print("Magelang,2 juni 2005")
+print("Perempun")
+print("Memasak")
