@@ -1,0 +1,95 @@
+#perulangan (loop)
+# for kondisi :
+#    aksi
+# dengan list
+angka1 = [1, 2, 3, 4, 5] #ini adalah list
+print(angka1)
+for i in angka1:
+    print(f"i sekarang -> {i}")
+    #print ("dina baik")
+print("and program\n")
+
+
+#mengunakan string
+data_str = "dina pintar"
+for huruf in data_str:
+    print(huruf)
+print("and program\n")
+
+#While Loop
+# while kondisi:
+# aksi ini
+# aksi itu
+print ("\nContoh 1\n")
+angka2a = 10
+while angka2a > 5:
+    print("awas lili!")
+    break
+print ("\nContoh 2\n")
+angka2b = 15
+print(f"angka sekarang -> {angka2b}")
+while angka2b < 8 :
+    angka2b +=  1
+    #angka2b = angka2b + 1
+    print(f"angka sekarang -> {angka2b}")
+    print("awas lili")
+    break
+
+
+
+
+#Pass
+#pass -> dia berfungsi sebagai dummy, tidak akan dieksekusi
+angka3 = 0 
+while angka3 < 5:
+    angka3 = angka3 + 1 
+    if(angka3 == 3) :
+        pass # ini tidak akan dieksekusi
+    print(angka3)
+
+#continue 
+print ("\n====continue====\n")
+angka4 = 0
+print(f"angka sekarang-> {angka4}")
+
+while angka4 < 5:
+    angka4 = angka4 + 1
+    print(f"angka sekarang-> {angka4}") #aksi 1
+    if (angka4 ==3):
+        print("nice") 
+        continue # akan membuat loop meloncat ke step selanjutnya 
+    print("whasssup") #aksi 2
+    print("finish")
+
+#break 
+    angka5 = 0 
+    print(f"angka sekarang -> {angka5}")
+    while angka5 <5:
+        angka5 = angka5 + 1
+        print(f"angka sekarang -> {angka5}") # aksi 1
+        if (angka5 == 3):
+            print("nice")
+            break
+        print("whasssup") # aksi 2
+    print ("cukup mass")
+
+
+ #Latihan membuatn segitiga
+ # 1.Mengunakan for
+sisi = 4
+count = 1
+for i in range (sisi):
+    print("*" * count)
+    count += 1
+# 2. Mengunakan while
+sisi = 4
+count = 1
+while True :
+    print("*" * count)
+    count += 1
+    if count > sisi:
+        break
+
+
+
+
