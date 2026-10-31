@@ -1,0 +1,67 @@
+#1.membuat list awal 
+kendaraan = ["motor","mobil","sepeda","bus"]
+print("list_awal:", kendaraan)
+
+#a. tambahkan truk diakhir list
+kendaraan.append("truk")
+print(f"kendaraan ditambah lagi = {kendaraan}")
+
+#b.sisipkan becak di index 1
+kendaraan.insert(1,"becak")
+print(f"kendaraan_disisip becak = {kendaraan}")
+
+#c.hapus data yang berada paling belakang 
+kendaraan.pop()
+print(f"kendaraan_akhir = {kendaraan}")
+
+#d.ubah elemen sepeda menjadi skuter
+kendaraan[2] = "skuter"
+print(f"kendaraan dirubah = {kendaraan}")
+
+#e.tampilkan informasi jumlah total data 
+total_data = len(kendaraan)
+print(f"jumlah total data sekarang:", total_data)
+
+
+#2.list awal sesuai soal
+angka = [75,80,90,75,85,100,65]
+print("list awal:", angka)
+
+#a.cari tahu index ke berapa skor 100 berada
+index_100 = angka.index(100)
+print(f"skor 100 berada diindex ke:, {index_100}")
+
+#b.hitung ada berapa banyak siswa yang mendapat skor 75
+jumlah_75 = angka.count(75)
+print(f"jumlah siswa yang mendapat skor 75 = {jumlah_75}")
+
+#c.urutkan list tersebut dari nilai terkecil ke terbesar
+angka.sort()
+print(f"list setelah diurutkan (terkecil ke terbesar) = {angka}")
+
+#d. balikan urutan list tersebut menjadi dari terbesar ke terkecil
+angka.reverse()
+print(f"list setelah dibalik (terbesar ke terkecil) = {angka}")
+
+
+#3. a.membuat dua list awal sesuai soal 
+menu_utama = ["Nasi Goreng","Mie Ayam"]
+menu_tambahan = ["Kerupuk","Es Teh"]
+#   b.mengabungkan menu_tambahan ke dalam menu_utama mengunakan fungsi.extend()
+menu_utama.extend(menu_tambahan)
+#   c.menampilkan hasil dari data gabungan tersebut
+print("hasil data gabungan menu :", menu_utama)
+
+
+#4.list awal sesuai soal
+data_barang = [["buku",5000],["pensil",2000],["pengaris",3000]]
+
+#a.tampilkan harga dari "pensil" dengan memangil indeks spesifik
+harga_pensil = data_barang[1][1]
+print(f"harga dari pensil adalah = {harga_pensil}")
+print("menampilka  semua data mengunakan perulangan:")
+#b.gunakan perulangan untuk menampilkan data pada format yang diminta
+for barang in data_barang:
+    nama = barang [0]
+    harga = barang [1]
+    print(f"nama:{nama}, harga: {harga}") 
