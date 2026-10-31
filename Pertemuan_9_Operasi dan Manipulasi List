@@ -1,0 +1,143 @@
+#program 9.1 list
+##---List---
+# Kumpulan data numbers 
+data_angka = [1,4,5,3]
+print(data_angka)
+
+#kumpulan data_string
+data_string = ["putri", "tina", "lusi"]
+print(data_string)
+
+#kumpulan data boolean 
+data_boolean = [True, False, True, True]
+print(data_boolean)
+
+#kumpulan data campuran 
+data_campuran = (2,"tahu",4,"es cream","dimas",True,"putri",False)
+print(data_campuran)
+
+##cara alternatif membuat list
+data_range = range(1,9,5) #range(start,stop,step)
+print(data_range)
+data_list = list(data_range)
+print(data_list)
+
+#membuat list dengan for loop, list comprehension
+list_for =(i**2 for i in range(0,10))
+print(list_for)
+
+#membuat list pake for pake if
+list_for_if = [i for i in range (0,10)if i !=5]
+print(list_for_if)
+
+list_for_if = [i for i in range(0,10)if i %2 == 0]
+print(list_for_if)
+
+list_for_if = [i for i in range (0,10) if i %2 != 0]
+print(list_for_if)
+
+#program 9.2 manipulasi list 
+##---Operasi List---
+#index 0(-3)  1(-2)  2(-1)
+data = {"asep","nanda","uzi"}
+
+#mengambil data dari list 
+data_0 =data(0)
+print(f"data pertama (index 0)= (data_0)")
+
+data_terakhir = data (-1)
+print(f"data terakhir adalah = (data_terakhir)")
+
+#mengambil info jumlah data dalam list
+panjang_data = len(data)
+print(f"panjang data = (panjang_data)")
+
+#manipulasi data list
+#menambah item pada list sesuai posisi 
+print(f"data sebelum ditambah = \n{data}")
+
+#data.insert (posisi,item)
+data.imsert(1,"anam")
+print(f"data sesudah ditambah = \n{data}")
+
+#menambah diakhir list 
+data.append ("ririn")
+print(f"data sesudah ditambah lagi = \n{data}")
+
+#menambah list dengan list
+data_baru =["zoro","nami","luffy"]
+data.extend(data_baru)
+print(f"data gabungan = \n{data}")
+
+#merubah data 
+#kita ubah data 2 menjadi luky
+data[2] = "luky"
+print(f"data rubah = \n{data}")
+
+#menghapus data 
+data.remove("nanda")
+print(f"data hapus = \n{data}")
+
+#menghapus data paling belakang 
+data.pop()
+print(f"data akhir = \n{data}")
+
+#program 9.3 operasi list
+##---Operasi List---
+
+#index 0(-3) 1(-2) 2(-1)
+data_angka = [1,5,1,4,2,4,3,2,5,7,8,9,0]
+print(f"data angka = \n{data_angka}")
+
+#count data 
+jumlah_data_4 = data_angka.count(4)
+jumlah_data_3 = data_angka.count(3)
+print(f"jumlah data 4 = {jumlah_data_4}")
+print(f"jumlah data 3 = {jumlah_data_3}")
+
+#ambil posisi data 
+data = ["lusi","tina","yuli","nini"]
+print(f"data = {data}")
+index_tina = data.index("tina")
+index_yuli = data.index("yuli")
+print(f"index si tina = {index_tina}")
+print(f"index si yuli = {index_yuli}")
+
+#mengurutkan list {masih eror}
+print(f"data angka sebelum disort =\n{data_angka}")
+data_angka.sort()
+print(f"data angka sort =\n{data_angka}")
+
+print(f"data = {data}")
+data.sort()
+print(f"data sort = {data}")
+
+#balik listnya
+data_angka.reverse()
+data.reverse()
+print(f"data direverse \n{data_angka}")
+print(f"data direverse \n{data}")
+
+#program 9.4 Nested list
+##---Nested List---
+data_0 = [1,2]
+data_1 = [3,4]
+data_list_biasa = [1,2,3,4]
+print(f"list biasa = {data_list_biasa}")
+
+list_2D = [data_0, data_1,6,7]
+print(f"list 2D = {list_2D}")
+
+#contoh pengunaan 
+peserta_0 = ["beni",24,"laki-laki"]
+peserta_1 = ["yudi",15,"laki-laki"]
+peserta_2 = ["siti",36,"perempuan"]
+
+list_peserta = [peserta_0,peserta_1,peserta_2]
+print(f"peserta = {list_peserta}")
+
+for peserta in list_peserta:
+    print(f"nama\t = {list_peserta[0]}")
+    print(f"umur\t = {list_peserta[1]}")
+    print(f"gendre\t = {list_peserta[2]}")
+    
