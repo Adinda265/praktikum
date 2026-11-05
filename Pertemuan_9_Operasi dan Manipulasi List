@@ -13,11 +13,11 @@ data_boolean = [True, False, True, True]
 print(data_boolean)
 
 #kumpulan data campuran 
-data_campuran = (2,"tahu",4,"es cream","dimas",True,"putri",False)
+data_campuran = [2,"tahu",4,"es cream","dimas",True,"putri",False]
 print(data_campuran)
 
 ##cara alternatif membuat list
-data_range = range(1,9,5) #range(start,stop,step)
+data_range = range(1,9,5) 
 print(data_range)
 data_list = list(data_range)
 print(data_list)
@@ -39,25 +39,24 @@ print(list_for_if)
 #program 9.2 manipulasi list 
 ##---Operasi List---
 #index 0(-3)  1(-2)  2(-1)
-data = {"asep","nanda","uzi"}
+data = ["asep","nanda","uzi"]
 
 #mengambil data dari list 
-data_0 =data(0)
-print(f"data pertama (index 0)= (data_0)")
+data_pertama = data[0]
+print(f"data pertama (index 0) = {data_pertama}")
 
-data_terakhir = data (-1)
-print(f"data terakhir adalah = (data_terakhir)")
+data_terakhir = data[-1]
+print(f"data terakhir adalah = {data_terakhir}")
 
 #mengambil info jumlah data dalam list
 panjang_data = len(data)
-print(f"panjang data = (panjang_data)")
+print(f"panjang data = {panjang_data}")
 
 #manipulasi data list
 #menambah item pada list sesuai posisi 
 print(f"data sebelum ditambah = \n{data}")
-
 #data.insert (posisi,item)
-data.imsert(1,"anam")
+data.insert(1,"anam")
 print(f"data sesudah ditambah = \n{data}")
 
 #menambah diakhir list 
@@ -66,7 +65,7 @@ print(f"data sesudah ditambah lagi = \n{data}")
 
 #menambah list dengan list
 data_baru =["zoro","nami","luffy"]
-data.extend(data_baru)
+data.extend(data)
 print(f"data gabungan = \n{data}")
 
 #merubah data 
