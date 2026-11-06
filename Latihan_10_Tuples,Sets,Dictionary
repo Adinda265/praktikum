@@ -1,0 +1,49 @@
+#1. a.membuat Tuples bernama mahasiswa 
+mahasiswa = ("susi lestari","203122","Teknologi Informasi")
+
+#   b.menampilkan sata NIM dan Prodi dengan mengakses indexnya
+# index dalan python dimulai dari 0
+#"nama" berada diindex ke 0, "NIM" dan "Prodi" dengan mengakses indexnya 
+print("NIM:)",mahasiswa[1])
+print("Prodi:",mahasiswa[2])
+
+#   c.mencoba data tuple (akan menghasilkan eror)
+#try:
+    #mahasiswa[3] = "Teknologi Informasi"
+#except typeError as e:
+   # print(f"\npesan error yang muncul: {e}")
+
+#   d.membuat set bernama 'nilai_angka'
+nilai_angka = {10,4,3,2,4,10,7,5}
+print(f"\nIsi dari nilai_angka: {nilai_angka}")
+
+#2. a.membuat dictionary awal
+data_mahasiswa = {
+    "NIM": "240101",
+    "nama":"Budi Santoso",
+    "prodi":"Teknologi Informasi"
+}
+#   b.membuat nilai prodi dan menambah key angkatan
+data_mahasiswa["prodi"] = "sastra mesin"
+data_mahasiswa["angkatan"] = 2026
+
+#   c.menghapus data nim
+del data_mahasiswa["NIM"]
+
+#menampilkan hasil akhir dictionary kelayar
+print(data_mahasiswa)
+
+#3.  a. membuat dictionary bernama keranjang
+keranjang = {"apel": 5000,"pisang": 3000,"jeruk":7000,"anggur": 15000}
+#inisialisasi variabel untuk menyimpan total belanja 
+total_belanja = 0
+
+#    b.gunakan perulangan untuk menampilkan setiap barang dan harganya 
+for buah,harga in keranjang.items():
+    print(f"harga{buah}:Rp {harga}")
+
+#    c.menambah harga buah kwtotal belanja disetiap peluang 
+total_belanja += harga
+
+#menampilkan hasil total belanja 
+print(f"total belanja : Rp {total_belanja}")
