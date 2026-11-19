@@ -1,0 +1,50 @@
+import datetime
+import os
+import random
+import string
+
+#template awal (multi keys) sebagai struktur dasar setiap buku 
+buku_template={
+     "judul" : "judul buku",
+     "penulis":"nama penulis",
+     "tahun terbit":"2005",
+     "tanggal pinjam":"datetime.datetime(2015,12,20)",
+     "status":"tersedia"
+}
+#dictionary utama untuk menampung semua buku(nesting dictionary)
+data_perpustakaan = {}
+while True:
+    print("\n"+"="*45)
+    print(f"{"SISTEM MANAJEMEN PERPUSTAKAAN":^45}")
+    print("="*45)
+    #membuat dictionary baru dari template.keys
+    buku_baru = dict.fromkeys(buku_template.keys())
+    #mengisi setiap key dengan input
+    buku_baru["judul"] = input("judul buku: ")
+    buku_baru["penulis"] = input("penulis: ")
+    buku_baru["tahun terbit"] = int(input("tahun terbit: "))
+    print("masukan tanggal terakhir pinjam: ") 
+    tahun=int(input("tahun(yyyy):"))
+    bulan=int(input("bulan(1-12):"))
+    tanggal=int(input("tanggal(1-31):"))
+    buku_baru["tanggal pinjam"]=datetime.datetime(tahun,bulan,tanggal)
+    buku_baru["status"] = input("status(tersedia/tidak):")
+    KEY=" ".join((random.choice(string.ascii_uppercase) for i in range(6)))
+    data_perpustakaan.update({KEY: buku_baru})
+    print("\n"+"="*106)
+    print(f"{"KEY":<8}|{"judul buku":<25}|{"penulis":<20}|{"tahun terbit":<12}|{"tanggal terakhir pinjam":<23}|{"status":<10}")
+    print("-"*106)
+    for KEY in data_perpustakaan:
+        KEY_BUKU = ("key")
+        judul = data_perpustakaan[KEY]["judul"]
+        penulis = data_perpustakaan[KEY]["penulis"]
+        tahun = data_perpustakaan[KEY]["tahun terbit"]
+        tanggal = data_perpustakaan[KEY]["tanggal pinjam"].strftime("%x")
+        status = data_perpustakaan[KEY]["status"]
+        print(f"{KEY_BUKU:<8}|{judul:<25}|{penulis:<20}|{tahun:<12}|{tanggal:<23}|{status:<10}")
+        print("="*106)
+    lanjut=input("\n apakah ingin menambah buku lagi? (y/n):").lower()
+    if lanjut != "y":
+     break
+
+

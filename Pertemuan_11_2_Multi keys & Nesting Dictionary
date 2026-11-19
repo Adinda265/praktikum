@@ -1,0 +1,73 @@
+#Program 11.2 Latihan Dictionary Bagian 1
+import datetime
+mahasiswa_template={
+    "nama":"Lina putri",
+    "nim":"20240021",
+    "sks_lulus":"130",
+    "lahir":"datetime.datetime(2006,3,22)"
+}
+data_mahasiswa={}
+print(f"{"SELAMAT DATANG":^20}")
+print(f"{"DATA MAHASISWA":^20}")
+print("-"*20)
+
+mahasiswa=dict.fromkeys(mahasiswa_template.keys())
+print(mahasiswa)
+mahasiswa["nama"]=input("nama mahasiswa:")
+mahasiswa["nim"]=input("nim mahasiswa:")
+mahasiswa["sks_lulus"]=int(input("SKS Lulus:"))
+TAHUN_LAHIR=int(input("tahun lahir (xxxx):"))
+BULAN_LAHIR=int(input("bulan lahir(1-12):"))
+TANGGAL_LAHIR=int(input("tanggal lahir(1-31):"))
+mahasiswa["lahir"] 
+datetime.datetime(TAHUN_LAHIR,BULAN_LAHIR,TANGGAL_LAHIR)
+print(mahasiswa)
+
+
+#Program 11.3 Latihan Dictionary Bagian 2
+import datetime 
+import os
+import string
+import random 
+
+# template dict mahasiswa 
+mahasiswa_template={
+    "nama":"luluk ayudiah",
+    "nim":"20202322",
+    "sks_lulus":"120",
+    "lahir":datetime.datetime(2010,11,5)
+}
+data_mahasiswa={}
+while True:
+    #os.system("cls")#untuk windows
+    os.system("clear")
+    print(f"{"SELAMAT DATANG":^20}")
+    print(f"{"DATA MAHASISWA":^20}")
+    print("-"*20)
+
+    mahasiswa=dict.fromkeys(mahasiswa_template.keys())
+    mahasiswa["nama"] = input("Nama Mahasiswa:") 
+    mahasiswa["nim"] = input("NIM Mahasiswa:") 
+    mahasiswa["sks_lulus"] = int(input("SKS Lulus:"))
+    TAHUN_LAHIR = int(input("Tahun lahir (YYYY):")) 
+    BULAN_LAHIR = int(input("Bulan lahir (1-12):")) 
+    TANGGAL_LAHIR = int(input("Tanggal lahir (1-31):")) 
+    mahasiswa['lahir'] = datetime.datetime(TAHUN_LAHIR,BULAN_LAHIR,TANGGAL_LAHIR) 
+    KEY =''.join((random.choice(string.ascii_uppercase) for i in range(6))) 
+    data_mahasiswa.update({KEY:mahasiswa}) 
+    # dari program sebelumnya, hilangkan beasiswa 
+    print(f"\n{"KEY":<8} {"nama":<12} {"nim":<10} {"sks lulus":<9} {"tanggal lahir":<11}")
+    print("-"*40)
+
+    for mahasiswa in data_mahasiswa:
+        KEY = mahasiswa 
+        nama = data_mahasiswa[KEY]["nama"]
+        nim = data_mahasiswa[KEY]["nim"]
+        sks = data_mahasiswa[KEY]["sks_lulus"]
+        lahir = data_mahasiswa[KEY]["lahir"].strftime("%x")
+        print(f"{KEY:<8} {nama:<12} {nim:<10} {sks:<9} {lahir:<11}")
+        print("\n")
+        is_done=input ("mau nambah lagi kak (y/n)?")
+        if is_done=="n": 
+            break 
+print("\nakhir dari program, terima kasih")
