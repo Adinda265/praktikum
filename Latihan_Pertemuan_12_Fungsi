@@ -1,0 +1,54 @@
+#latihan
+
+import math
+
+# a. Fungsi menghitung luas persegi panjang
+def luas_persegi_panjang():
+    panjang = float(input("Masukkan panjang: "))
+    lebar = float(input("Masukkan lebar: "))
+    luas = panjang * lebar
+    print("Luas persegi panjang =", luas)
+
+
+# b. Fungsi menghitung volume balok
+def volume_balok():
+    panjang = float(input("Masukkan panjang: "))
+    lebar = float(input("Masukkan lebar: "))
+    tinggi = float(input("Masukkan tinggi: "))
+    volume = panjang * lebar * tinggi
+    print("Volume balok =", volume)
+
+
+# c. Fungsi menghitung luas lingkaran
+def luas_lingkaran():
+    jari_jari = float(input("Masukkan jari-jari: "))
+    luas = math.pi * jari_jari ** 2
+    print("Luas lingkaran =", luas)
+
+
+# d. Fungsi menghitung volume bola
+def volume_bola():
+    jari_jari = float(input("Masukkan jari-jari: "))
+    volume = (4/3) * math.pi * jari_jari ** 3
+    print("Volume bola =", volume)
+
+
+# Program utama
+print("=== PROGRAM MENGHITUNG BANGUN RUANG DAN DATAR ===")
+print("1. Luas Persegi Panjang")
+print("2. Volume Balok")
+print("3. Luas Lingkaran")
+print("4. Volume Bola")
+
+pilihan = input("Pilih perhitungan (1-4): ")
+
+if pilihan == "1":
+    luas_persegi_panjang()
+elif pilihan == "2":
+    volume_balok()
+elif pilihan == "3":
+    luas_lingkaran()
+elif pilihan == "4":
+    volume_bola()
+else:
+    print("Pilihan tidak valid!")
